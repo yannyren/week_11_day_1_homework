@@ -1,10 +1,14 @@
 var dummyCats = [
-  {name: "Alex", favFood: "Salmon", link: },
-  {name: "Keith", favFood: "Tuna", link: },
+  {name: "Alex", favFood: "Salmon", link:"/img/Alex.png" },
+  {name: "Keith", favFood: "Tuna", link: "/img/Keith.jpg"},
 ]
 
 
-var app = function() {};
+var app = function() {
+  for (var i = 0; i < dummyCats.length; i++) {
+    addCat(dummyCats[i].name, dummyCats[i].favFood, dummyCats[i].link);
+  }
+};
 
 var addCat = function(name, favFood, link) {
     var ul = document.createElement("ul");
@@ -14,14 +18,17 @@ var addCat = function(name, favFood, link) {
     liName.innerText = "Name: " + name;
 
     var liFavFood = document.createElement("li");
-    liFood.innerText = "Favourite food: " + favFood;
+    liFavFood.innerText = "Favourite food: " + favFood;
 
-    var liImg = document.createElement("li");
-    liImg.innerHTML = "<img> width="500" src="link" </img>";
+    var li = document.createElement("li");
+    var liImg = document.createElement("img");
+    liImg.src = link;
+    liImg.style.width = "500px";
 
     ul.appendChild(liName);
     ul.appendChild(liFavFood);
-    ul.appendChild(liImg);
+    ul.appendChild(li);
+    li.appendChild(liImg)
 
     var cats = document.querySelector("#cats");
     cats.appendChild(ul);
