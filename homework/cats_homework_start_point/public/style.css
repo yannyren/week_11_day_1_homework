@@ -6,3 +6,23 @@
 .red-quote{
   color: red;
 }
+
+
+body {
+  text-align: center;
+  img: center;
+  background-color:antiquewhite
+
+}
+
+img {
+
+  border-radius:50px;
+
+}
+
+li {
+
+  list-style: none;
+
+}

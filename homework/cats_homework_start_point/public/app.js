@@ -21,6 +21,7 @@ var addCat = function(name, favFood, link) {
     liFavFood.innerText = "Favourite food: " + favFood;
 
     var li = document.createElement("li");
+    
     var liImg = document.createElement("img");
     liImg.src = link;
     liImg.style.width = "500px";
